@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t-- > 0) {
+        int a, b;
+        cin >> a >> b;
+
+        int moves = 0;
+        if (a % b == 0) {
+            moves = 0;
+        } else {
+            int res = (a / b) + 1;
+            moves = (b * res) - a;
+        }
+
+        cout << moves << endl;
+    }
+
+    return 0;
+}
