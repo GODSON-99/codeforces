@@ -1,0 +1,20 @@
+#include <iostream>
+
+long long calculateFunction(long long n) {
+    if (n % 2 == 0) {
+        return n / 2;
+    } else {
+        return -(n + 1) / 2;
+    }
+}
+
+int main() {
+    long long n;
+    std::cin >> n;
+
+    long long result = calculateFunction(n);
+
+    std::cout << result << std::endl;
+
+    return 0;
+}
