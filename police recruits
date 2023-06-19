@@ -1,0 +1,30 @@
+#include <iostream>
+
+int main() {
+    int n;
+    std::cin >> n;
+
+    int untreatedCrimes = 0;
+    int officersAvailable = 0;
+
+    for (int i = 0; i < n; i++) {
+        int event;
+        std::cin >> event;
+
+        if (event == -1) {
+            // Crime occurred
+            if (officersAvailable == 0) {
+                untreatedCrimes++;
+            } else {
+                officersAvailable--;
+            }
+        } else {
+            // Officers recruited
+            officersAvailable += event;
+        }
+    }
+
+    std::cout << untreatedCrimes << std::endl;
+
+    return 0;
+}
