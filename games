@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+ int main()
+ {
+   int n;
+   
+   int championship= 0 ;
+   cin>>n;
+   int h[n],a[n];
+   for(int k=0;k<n;k++){
+      cin>>h[k]>>a[k]; 
+      
+   }
+   int j=0;
+    for(int i=0;i<n;i++){
+     for(int j=0;j<n;j++)
+   
+     {
+        
+         if(i!=j&&h[i]==a[j])
+          {championship++;
+            
+          }
+        }
+       
+     }
+       cout<<championship<<endl;
+   }
+   //cout<<championship<<endl;
+   
+     
+
