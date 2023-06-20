@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    unordered_map<string, bool> diaryMap;
+    for (int i = 0; i < n; i++) {
+        string name;
+        cin >> name;
+
+        if (diaryMap.count(name) > 0) {
+            cout << "YES" << endl;
+        } else {
+            diaryMap[name] = true;
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}
